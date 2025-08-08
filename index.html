@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>"Empresa" - Construção e Remodelação</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script defer>
+    // Dark mode toggle
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+    }
+
+    // Image modal
+    document.addEventListener("DOMContentLoaded", function () {
+      const images = document.querySelectorAll(".gallery-item img");
+      const modal = document.createElement("div");
+      modal.classList.add("modal");
+      modal.innerHTML = '<span class="close">&times;</span><img class="modal-content">';
+      document.body.appendChild(modal);
+
+      const modalImg = modal.querySelector(".modal-content");
+      const closeBtn = modal.querySelector(".close");
+
+      images.forEach(img => {
+        img.addEventListener("click", () => {
+          modal.style.display = "flex";
+          modalImg.src = img.src;
+        });
+      });
+
+      closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) modal.style.display = "none";
+      });
+    });
+  </script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-overlay">
+      <h1>"Empresa"</h1>
+      <p>Excelência em Remodelações e Construção Civil</p>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section">
+      <h2>Serviços</h2>
+      <div class="services">
+        <div class="service-item"><i>🛠</i><h3>Remodelações</h3></div>
+        <div class="service-item"><i>🏠</i><h3>Construção</h3></div>
+        <div class="service-item"><i>🔨</i><h3>Carpintaria</h3></div>
+        <div class="service-item"><i>🎨</i><h3>Pintura</h3></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Galeria de Trabalhos</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="images/projeto1.png" alt="Projeto 1">
+          <p>Remodelação de Cozinha</p>
+        </div>
+        <div class="gallery-item">
+          <img src="images/projeto2.png" alt="Projeto 2">
+          <p>Obra de Interior Moderna</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Testemunhos</h2>
+      <em>"Serviço incrível e muito profissional. Recomendo a 100%!" - Joana S.</em><br>
+      <em>"A equipa foi pontual e o resultado superou as expectativas." - Carlos M.</em>
+    </section>
+
+    <section id="contactos" class="section">
+      <h2>Contactos</h2>
+
+      <form action="mailto:geral@acborges.pt" method="post" enctype="text/plain">
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu email" required />
+        <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <div style="text-align: center; margin-top: 1.5rem; font-size: 1rem; color: #444;">
+        📞 Telef. <a href="tel:+351211912340">211 912 340</a> (chamada para a rede fixa nacional) <br />
+        ✉️ E-Mail: <a href="mailto:geral@acborges.pt">geral@acborges.pt</a>
+      </div>
+    </section>
+
+    <section id="apoio" class="section">
+      <h2>Apoio</h2>
+      <p style="text-align: center; font-size: 1rem; color: #444;">
+        Apoio: <strong>Don Byte, Lda.</strong> <br />
+        📞 <a href="tel:+351219674925">219 674 925</a> (chamada para a rede fixa nacional) <br />
+        🌐 <a href="https://www.donbyte.pt" target="_blank">www.donbyte.pt</a> <br />
+        ✉️ <a href="mailto:geral@donbyte.pt">geral@donbyte.pt</a>
+      </p>
+    </section>
+
+  </main>
+
+  <a href="https://wa.me/351912345678" class="whatsapp-float" target="_blank">
+    <i>💬</i> WhatsApp
+  </a>
+
+  <footer>
+    &copy; 2025 "Empresa". Todos os direitos reservados.
+  </footer>
+</body>
+</html>

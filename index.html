@@ -98,13 +98,11 @@
 
       <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
         <input type="hidden" name="form-name" value="contact">
-        <input type="text" name="name" placeholder="Nome" required>
-        <input type="email" name="email" placeholder="E-mail" required>
-        <textarea name="message" placeholder="Mensagem" required></textarea>
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu email" required />
+        <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
         <div data-netlify-recaptcha="true"></div>
-        <p>
-          <button type="submit">Send</button>
-        </p>
+        <button type="submit">Enviar</button>
       </form>
       <div style="text-align: center; margin-top: 1.5rem; font-size: 1rem; color: #444;">
         📞 Telef. <a href="tel:+351123456789">123 456 789</a> (chamada para a rede fixa nacional) <br />

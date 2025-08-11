@@ -1,134 +1,146 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GCN9M644VX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-GCN9M644VX');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="description" content="Empresa especializada em construção e remodelação, oferecendo serviços de alta qualidade em carpintaria, pintura e muito mais. Contacte-nos para um orçamento!">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="serviços locais, contato, empresa 1, formulário">
-  <title>"Empresa" - Construção e Remodelação</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script defer>
-    // Dark mode toggle
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark");
-    }
-
-    // Image modal
-    document.addEventListener("DOMContentLoaded", function () {
-      const images = document.querySelectorAll(".gallery-item img");
-      const modal = document.createElement("div");
-      modal.classList.add("modal");
-      modal.innerHTML = '<span class="close">&times;</span><img class="modal-content">';
-      document.body.appendChild(modal);
-
-      const modalImg = modal.querySelector(".modal-content");
-      const closeBtn = modal.querySelector(".close");
-
-      images.forEach(img => {
-        img.addEventListener("click", () => {
-          modal.style.display = "flex";
-          modalImg.src = img.src;
-        });
-      });
-
-      closeBtn.addEventListener("click", () => {
-        modal.style.display = "none";
-      });
-
-      modal.addEventListener("click", (e) => {
-        if (e.target === modal) modal.style.display = "none";
-      });
-    });
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModernBuild - Empresa de Construção</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-overlay">
-      <h1>"Empresa"</h1>
-      <p>Excelência em Remodelações e Construção Civil</p>
+    <header class="sticky">
+        <div class="logo">ModernBuild</div>
+        <nav>
+            <a href="#home" class="nav-home">Home</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contato</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Bem-vindo à ModernBuild</h1>
+        <p>Construindo o futuro com inovação e qualidade. Inspirado em designs modernos como os da Apple e Lusion.</p>
+    </section>
+
+    <section id="portfolio">
+        <h2>Nosso Portfolio</h2>
+        <div class="grid">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Projeto de Construção 1" data-description="Descrição detalhada do Projeto 1: Uma construção residencial moderna com foco em sustentabilidade.">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Projeto de Construção 2" data-description="Descrição detalhada do Projeto 2: Espaço comercial inovador com design contemporâneo.">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Projeto de Construção 3" data-description="Descrição detalhada do Projeto 3: Infraestrutura urbana que combina funcionalidade e estética.">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Projeto de Construção 4" data-description="Descrição detalhada do Projeto 4: Renovação de casa de luxo com materiais premium.">
+        </div>
+    </section>
+
+    <section id="reviews">
+        <h2>O que Nossos Clientes Dizem</h2>
+        <div class="reviews-container">
+            <div class="review">
+                <p>"A ModernBuild transformou nossa visão em realidade com profissionalismo e eficiência."</p>
+                <cite>- Cliente Satisfeito A</cite>
+            </div>
+            <div class="review">
+                <p>"Equipe incrível, prazos cumpridos e qualidade impecável. Recomendo!"</p>
+                <cite>- Cliente Satisfeito B</cite>
+            </div>
+            <div class="review">
+                <p>"Design moderno e construção sólida. Estamos muito felizes com o resultado."</p>
+                <cite>- Cliente Satisfeito C</cite>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Formulário de Contato</h2>
+        <form name="contact" method="post" action="/" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact">
+            <input type="text" name="bot-field" class="hidden">
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="mensagem" placeholder="Mensagem descritiva" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <section id="contacts">
+        <h2>Contatos</h2>
+        <p>Email: info@modernbuild.com</p>
+        <p>Telefone: +351 123 456 789</p>
+        <p>Endereço: Rua Exemplo, 123, Lisboa, Portugal</p>
+    </section>
+
+    <footer>
+        &copy; 2025 ModernBuild. Todos os direitos reservados.
+    </footer>
+
+    <!-- Modal for Interactive Images -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
     </div>
-  </header>
 
-  <main>
+    <script>
+        // Force scroll to top on load with multiple events to ensure consistency
+        function forceScrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'auto' });
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        }
 
-    <section class="section">
-      <h2>Serviços</h2>
-      <div class="services">
-        <div class="service-item"><i>🛠</i><h3>Remodelações</h3></div>
-        <div class="service-item"><i>🏠</i><h3>Construção</h3></div>
-        <div class="service-item"><i>🔨</i><h3>Carpintaria</h3></div>
-        <div class="service-item"><i>🎨</i><h3>Pintura</h3></div>
-      </div>
-    </section>
+        window.addEventListener('load', forceScrollToTop);
+        window.addEventListener('DOMContentLoaded', forceScrollToTop);
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
 
-    <section class="section">
-      <h2>Galeria de Trabalhos</h2>
-      <div class="gallery">
-        <div class="gallery-item">
-          <img src="images/projeto1.png" alt="Foto Projeto 1">
-          <p>Remodelação de Cozinha</p>
-        </div>
-        <div class="gallery-item">
-          <img src="images/projeto2.png" alt="Foto Projeto 2">
-          <p>Obra de Interior Moderna</p>
-        </div>
-      </div>
-    </section>
+        // Handle Home link click to scroll fully to top
+        document.querySelector('.nav-home').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        });
 
-    <section class="section">
-      <h2>Testemunhos</h2>
-      <em>"Serviço incrível e muito profissional. Recomendo a 100%!" - Joana S.</em><br>
-      <em>"A equipa foi pontual e o resultado superou as expectativas." - Carlos M.</em>
-    </section>
+        // On-scroll animations using Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, { threshold: 0.1 });
 
-    <section id="contactos" class="section">
-      <h2>Contactos</h2>
+        // Observe portfolio images, reviews, and all sections except hero
+        document.querySelectorAll('#portfolio img, #reviews .review, section:not(#home)').forEach(el => {
+            observer.observe(el);
+        });
 
-      <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" action="https://stellular-mochi-937523.netlify.app/contact">
-        <input type="hidden" name="form-name" value="contact">
-        <input type="text" name="nome" placeholder="Seu nome" required />
-        <input type="email" name="email" placeholder="Seu email" required />
-        <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
-        <div data-netlify-recaptcha="true"></div>
-        <button type="submit">Enviar</button>
-      </form>
-      <div style="text-align: center; margin-top: 1.5rem; font-size: 1rem; color: #444;">
-        📞 Telef. <a href="tel:+351123456789">123 456 789</a> (chamada para a rede fixa nacional) <br />
-        ✉️ E-Mail: <a href="mailto:geral@empresa.pt">geral@empresa.pt</a>
-      </div>
-    </section>
-    <!--
-    <section id="apoio" class="section">
-      <h2>Apoio</h2>
-      <p style="text-align: center; font-size: 1rem; color: #444;">
-        Apoio: <strong>Don Byte, Lda.</strong> <br />
-        📞 <a href="tel:+351219674925">219 674 925</a> (chamada para a rede fixa nacional) <br />
-        🌐 <a href="https://www.donbyte.pt" target="_blank">www.donbyte.pt</a> <br />
-        ✉️ <a href="mailto:geral@donbyte.pt">geral@donbyte.pt</a>
-      </p>
-    </section>
-    -->
+        // Modal functionality for interactive images
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const captionText = document.getElementById('caption');
+        const closeBtn = document.getElementsByClassName('close')[0];
 
-  </main>
+        document.querySelectorAll('#portfolio img').forEach(img => {
+            img.addEventListener('click', function() {
+                modal.style.display = 'block';
+                modalImg.src = this.src;
+                captionText.innerHTML = this.dataset.description || this.alt;
+            });
+        });
 
-  <a href="https://wa.me/351912345678" class="whatsapp-float" target="_blank">
-    <i>💬</i> WhatsApp
-  </a>
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
 
-  <footer>
-    &copy; 2025 "Empresa". Todos os direitos reservados.
-  </footer>
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
